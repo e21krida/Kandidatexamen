@@ -16,7 +16,13 @@ function generateCanvases() {
     text.textContent = `Canvas ${i}`;
     canvasWrapper.appendChild(text);
     canvasContainer.appendChild(canvasWrapper);
+
+    generateThree();
   }
+}
+
+function generateThree() {
+  
 }
 
 window.onload = function () {
