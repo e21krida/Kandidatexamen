@@ -8,26 +8,31 @@ body {
   height: 100vh;
 }
 
-#menu {
-  background-color: #f0f0f0;
-}
-
 #content {
   padding: 20px;
 }
 
+#menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
 .menu-buttons {
-  margin-top: 20px; /* Adjust as needed */
-  text-align: center; /* Center align buttons */
+  text-align: center;
 }
 
 .menu-buttons button {
   background-color: #FFFFFF;
   color: #000000;
-  width: 100%;
+  width: 100%; /* Set width to 50% to fit two buttons side by side */
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  margin: 0; /* Set margin to 0 to remove space between buttons */
+  padding: 10px; /* Add padding to the buttons */
+  font-size: 10px; /* Reset font-size */
+  transition: background-color 0.5s;
 }
 
 .menu-buttons button:hover {
