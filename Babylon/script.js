@@ -1,11 +1,9 @@
+import * as BABYLON from 'babylonjs';
 console.log("Script loaded");
-
-const numCanvases = 12;
-
 function generateCanvases() {
   const canvasContainer = document.querySelector('.canvas-container');
 
-  for (let i = 1; i <= numCanvases; i++) {
+  for (let i = 1; i <= 12; i++) {
     const canvasWrapper = document.createElement('div');
     canvasWrapper.classList.add('canvas-wrapper');
     const canvas = document.createElement('canvas');
@@ -16,7 +14,13 @@ function generateCanvases() {
     text.textContent = `Canvas ${i}`;
     canvasWrapper.appendChild(text);
     canvasContainer.appendChild(canvasWrapper);
+
+    generateBabylon(canvas.id);
   }
+}
+
+function generateBabylon(canvas) {
+  console.log(canvas)
 }
 
 window.onload = function () {

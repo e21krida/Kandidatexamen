@@ -1,11 +1,9 @@
+import * as THREE from 'three';
 console.log("Script loaded");
-
-const numCanvases = 12;
-
 function generateCanvases() {
   const canvasContainer = document.querySelector('.canvas-container');
 
-  for (let i = 1; i <= numCanvases; i++) {
+  for (let i = 1; i <= 12; i++) {
     const canvasWrapper = document.createElement('div');
     canvasWrapper.classList.add('canvas-wrapper');
     const canvas = document.createElement('canvas');
@@ -17,12 +15,12 @@ function generateCanvases() {
     canvasWrapper.appendChild(text);
     canvasContainer.appendChild(canvasWrapper);
 
-    generateThree();
+    generateThree(canvas.id);
   }
 }
 
-function generateThree() {
-  
+function generateThree(canvas) {
+  console.log(canvas)
 }
 
 window.onload = function () {
